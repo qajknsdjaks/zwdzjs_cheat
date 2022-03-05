@@ -2,7 +2,7 @@
 暂时实现无限阳光 和 无CD
 存在 bug 未修复
 
-演示
+演示 Screenrecord.mp4
 
 脚本 zwdzjs.js 用与验证样本
 用法 adb push zwdzjs.js /data/data/com.popcap.pvz/files/com.popcap.pvz.js
@@ -10,7 +10,6 @@
 样本
 链接: https://pan.baidu.com/s/1CP_BWF8VUwmxFbmpxGrOgQ 提取码: 7i9f
 
-
 成品
-
+链接: https://pan.baidu.com/s/1PQTZFkVJIWGpMgComCb8Jw 提取码: nbkd
 
