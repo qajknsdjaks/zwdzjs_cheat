@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_mask"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="300.0dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_margin="4.0dip"
+        android:background="#FF4081">
+
+        <RelativeLayout
+            android:id="@+id/root_viewpager"
+            android:layout_above="@+id/cl_bottombar_tab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/cl_bottombar_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/cl_bottombar_tabbtn_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="加速器" />
+
+            <Button
+                android:id="@+id/cl_bottombar_tabbtn_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="连点器" />
+
+            <Button
+                android:id="@+id/cl_bottombar_tabbtn_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="礼包码" />
+
+            <Button
+                android:id="@+id/cl_bottombar_tabbtn_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="攻略区" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_blank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/rl_root">
+
+    </RelativeLayout>
+</RelativeLayout>

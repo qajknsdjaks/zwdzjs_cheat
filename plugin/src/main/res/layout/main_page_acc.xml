@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_main_acc_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="4.0dip">
+
+        <RelativeLayout
+            android:id="@+id/rl_topbar_setting_btn"
+            android:layout_width="44.0dip"
+            android:layout_height="44.0dip"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4.0dip"
+            android:background="@drawable/common_btn_oval_grey_background_selector">
+
+            <ImageView
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:layout_centerInParent="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/main_topbar_setting" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_topbar_logo"
+            android:layout_width="fill_parent"
+            android:layout_height="32.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4.0dip"
+            android:layout_marginEnd="4.0dip"
+            android:layout_toStartOf="@+id/rl_topbar_feedback_btn"
+            android:layout_toEndOf="@+id/rl_topbar_setting_btn"
+            android:paddingStart="10.0dip"
+            android:paddingEnd="10.0dip"
+            android:scaleType="centerInside"
+            android:src="@mipmap/mian_topbar_logo" />
+
+        <RelativeLayout
+            android:id="@+id/rl_topbar_notification_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="32.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4.0dip"
+            android:layout_marginEnd="4.0dip"
+            android:layout_toStartOf="@+id/rl_topbar_feedback_btn"
+            android:layout_toEndOf="@+id/rl_topbar_setting_btn"
+            android:background="@drawable/main_common_topbar_notification_background"
+            android:paddingStart="10.0dip"
+            android:paddingEnd="10.0dip"
+            android:visibility="gone">
+
+            <com.gh.plugin.main.dialog.main.custom.MarqueeTextView
+                android:id="@+id/tv_topbar_notification"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="检测到插件有新版本,为了您更好的游戏体验,请及时更新游戏版本."
+                android:textColor="#ffffc15b"
+                android:textSize="12.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_topbar_feedback_btn"
+            android:layout_width="44.0dip"
+            android:layout_height="44.0dip"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="4.0dip"
+            android:background="@drawable/common_btn_oval_grey_background_selector">
+
+            <ImageView
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/main_topbar_feedback" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/rl_main_acc_control"
+        android:layout_below="@+id/rl_topbar"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="12.0dip"
+        android:layout_marginBottom="12.0dip">
+
+        <TextView
+            android:id="@+id/tv_acc_scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="1.5"
+            android:text="X88"
+            android:textColor="#ff293a51"
+            android:textSize="32.0sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_main_acc_control"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:layout_marginBottom="12.0dip">
+
+        <RelativeLayout
+            android:id="@+id/rl_acc_activated_state_switch_btn"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/common_primary_color_circle_btn_background_selector">
+
+                <ImageView
+                    android:id="@+id/iv_acc_activated_state_switch_btn_icon"
+                    android:layout_width="16.0dip"
+                    android:layout_height="16.0dip"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/main_acc_activate_state_switch_btn_background_selector" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_acc_control_min_btn"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rl_acc_activated_state_switch_btn">
+
+            <RelativeLayout
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/common_primary_color_circle_btn_background_selector">
+
+                <ImageView
+                    android:layout_width="16.0dip"
+                    android:layout_height="16.0dip"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/main_acc_control_min" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <SeekBar
+            android:id="@+id/acc_seekbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/rl_acc_control_max_btn"
+            android:layout_toRightOf="@+id/rl_acc_control_min_btn"
+            android:max="30"
+            android:maxHeight="8.0dip"
+            android:minHeight="8.0dip"
+            android:paddingLeft="4.0dip"
+            android:paddingTop="12.0dip"
+            android:paddingRight="4.0dip"
+            android:paddingBottom="12.0dip"
+            android:progress="15"
+            android:progressDrawable="@drawable/main_acc_seekbar_progress_drawable"
+            android:splitTrack="false"
+            android:thumb="@drawable/main_acc_seekbar_progress_thumb"
+            android:thumbOffset="0.0dip" />
+
+        <RelativeLayout
+            android:id="@+id/rl_acc_control_max_btn"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/common_primary_color_circle_btn_background_selector">
+
+                <ImageView
+                    android:layout_width="16.0dip"
+                    android:layout_height="16.0dip"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/main_acc_control_max" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
